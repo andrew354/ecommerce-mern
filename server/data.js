@@ -2,6 +2,7 @@ import bcrypt from 'bcryptjs';
 const data = {
 	users: [
 		{ name: 'andre', email: 'andre@gmail.com', password: bcrypt.hashSync('1234', 8), isAdmin: true },
+		{ name: 'andrea', email: 'admin@example.com', password: bcrypt.hashSync('1234', 8), isAdmin: true },
 		{
 			name: 'John',
 			email: 'john@gmail.com',
@@ -11,7 +12,6 @@ const data = {
 	],
 	products: [
 		{
-			_id: '1',
 			name: 'Nike Slim Shirt',
 			category: 'Shirts',
 			image: 'https://soccerstore.azureedge.net/714-714-59832.png',
@@ -23,7 +23,6 @@ const data = {
 			description: 'high quality product',
 		},
 		{
-			_id: '2',
 			name: 'Adidas Fit Shirt',
 			category: 'Shirts',
 			image: 'https://soccerstore.azureedge.net/714-714-93596.png',
@@ -35,7 +34,6 @@ const data = {
 			description: 'high quality product',
 		},
 		{
-			_id: '3',
 			name: 'Lacoste Free Shirt',
 			category: 'Shirts',
 			image: 'https://photos6.spartoo.it/photos/160/16026929/16026929_500_A.jpg',
@@ -47,7 +45,6 @@ const data = {
 			description: 'high quality product',
 		},
 		{
-			_id: '4',
 			name: 'Nike Slim Pant',
 			category: 'Pants',
 			image:
@@ -60,7 +57,6 @@ const data = {
 			description: 'high quality product',
 		},
 		{
-			_id: '5',
 			name: 'Puma Slim Pant',
 			category: 'Pants',
 			image:
@@ -73,7 +69,6 @@ const data = {
 			description: 'high quality product',
 		},
 		{
-			_id: '6',
 			name: 'Adidas Fit Pant',
 			category: 'Pants',
 			image:
