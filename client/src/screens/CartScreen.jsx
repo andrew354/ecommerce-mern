@@ -14,6 +14,9 @@ export default function CartScreen() {
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
 
+	const userInfo = useSelector((state) => state.userSignin.userInfo);
+	console.log('userInfo from cart', userInfo);
+
 	useEffect(() => {
 		if (id) {
 			dispatch(addToCart(id, quantity));
@@ -75,7 +78,9 @@ export default function CartScreen() {
 							</h2>
 						</li>
 						<li>
-							<button className="primary">Proceed to Checkout</button>
+							<button className="primary">
+								<Link to={userInfo ? '/shipping' : '/signin'}>Proceed to Checkout</Link>
+							</button>
 						</li>
 					</ul>
 				</div>
